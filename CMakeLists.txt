@@ -58,7 +58,7 @@ function(symploke_module name)
   endif()
 endfunction()
 
-# The modules in their order (decision 0003).
+# The modules in their order (decisions 0003 and 0004).
 symploke_module(terms)
 symploke_module(syntax LIBRARIES symploke::terms)
 symploke_module(store LIBRARIES symploke::terms CHECK_LIBRARIES symploke::syntax)
@@ -66,3 +66,4 @@ symploke_module(query LIBRARIES symploke::store symploke::syntax)
 symploke_module(entailment LIBRARIES symploke::store CHECK_LIBRARIES symploke::syntax morphe::combinatorics)
 symploke_module(shapes LIBRARIES symploke::query CHECK_LIBRARIES symploke::syntax)
 symploke_module(canonical LIBRARIES symploke::terms morphe::combinatorics apodeixis::kernel CHECK_LIBRARIES symploke::syntax)
+symploke_module(jsonld LIBRARIES symploke::syntax CHECK_LIBRARIES symploke::canonical)

@@ -9,7 +9,7 @@ symploke is one of the foundation libraries of [Noetarium, the Science and Human
 symploke (συμπλοκή, the interweaving) is linked data:
 
 - the terms of RDF, their well-formedness and the values of their literals;
-- documents: N-Triples, N-Quads, Turtle and TriG, read and written; later JSON-LD;
+- documents: N-Triples, N-Quads, Turtle, TriG and JSON-LD, read and written;
 - a store indexed every way, edited by changes that undo;
 - queries in SPARQL's core; later updates;
 - entailment by RDFS and a declared part of OWL 2 RL, with derivations;
@@ -53,12 +53,12 @@ symploke shares its governing principle with its sibling repositories: **modular
 ```
 symploke/
 ├── CMakeLists.txt   the project: one header-only target symploke::<module> per module (symploke_module); the siblings added once
-├── terms/ · syntax/ · store/ · query/ · entailment/ · shapes/ · canonical/
+├── terms/ · syntax/ · store/ · query/ · entailment/ · shapes/ · canonical/ · jsonld/
 ├── docs/            the theory note
 └── development/     decisions · ideas · release notes
 ```
 
-Each module directory holds `README.md`, `include/symploke/<module>/` and `tests/check_<module>.cpp`, a check program on calx's `verification`, registered with CTest by `symploke_module`. The modules and their order are in [decision 0003](development/decisions/0003-the-first-modules.md).
+Each module directory holds `README.md`, `include/symploke/<module>/` and `tests/check_<module>.cpp`, a check program on calx's `verification`, registered with CTest by `symploke_module`. The modules and their order are in [decision 0003](development/decisions/0003-the-first-modules.md) and [decision 0004](development/decisions/0004-json-ld.md).
 
 ## 5. Working Procedures
 
@@ -81,4 +81,4 @@ C++20, header-only targets `symploke::<module>`; CMake 3.20 or later; checks on 
 
 ## 8. Current State
 
-As of 2026-11-15, the first seven modules are written and checked ([decision 0003](development/decisions/0003-the-first-modules.md); 71 checks). The repository is published at `https://github.com/huangwanhong-maker/symploke`.
+As of 2026-11-15, eight modules are written and checked ([decision 0003](development/decisions/0003-the-first-modules.md), [decision 0004](development/decisions/0004-json-ld.md): JSON-LD; 108 checks). The repository is published at `https://github.com/huangwanhong-maker/symploke`.

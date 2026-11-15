@@ -4,7 +4,7 @@
 
 symploke is a foundation library of linked data: the terms and documents of RDF, a store, queries, entailment, shapes, and graphs compared up to their blank nodes. It is one of the foundation libraries of [Noetarium, the Science and Humanity Infrastructure](https://github.com/huangwanhong-maker/Noetarium-The-Science-and-Humanity-Infrastructure), and a project in its own right.
 
-Status: **draft** (2026-11-15). Licence: MIT. Checks: 71.
+Status: **draft** (2026-11-15). Licence: MIT. Checks: 108.
 
 ## 1. Philosophy
 
@@ -30,7 +30,8 @@ Its pure core has no I/O; storing files, serving and editing are the works'.
 | [entailment](entailment/README.md) | RDFS and a declared part of OWL 2 RL materialised to a fixpoint, each conclusion with its derivation; inconsistencies reported | draft: 11 checks |
 | [shapes](shapes/README.md) | SHACL Core: targets, paths, value types, cardinality, ranges, strings, lists, pairs, logic, nesting, closed shapes; reports as RDF | draft: 7 checks |
 | [canonical](canonical/README.md) | Isomorphism of graphs up to their blank nodes and canonical labels, on morphe's canonical forms; a verdict | draft: 6 checks |
-| jsonld | JSON-LD 1.1 expansion, compaction and framing | planned |
+| [jsonld](jsonld/README.md) | JSON-LD 1.1: JSON read with lines and columns and written canonically (RFC 8785); documents expanded and turned into RDF by the API's algorithms, every keyword handled, remote contexts given by IRI and never fetched; datasets written compacted against prefixes; the API's error codes | draft: 37 checks |
+| jsonld (further) | Compaction against any context, framing and flattening | planned |
 | update | SPARQL Update; FROM and FROM NAMED | planned |
 
 ## 3. Dependencies
@@ -39,7 +40,7 @@ morphe (canonical forms, reachability in the checks), apodeixis (verdicts), calx
 
 ## 4. Building
 
-Inside the infrastructure, `node development/tools/run-cpp.mjs foundations/symploke foundations/symploke` builds and runs the 71 checks.
+Inside the infrastructure, `node development/tools/run-cpp.mjs foundations/symploke foundations/symploke` builds and runs the 108 checks.
 
 ## 5. References
 
@@ -47,4 +48,6 @@ Inside the infrastructure, `node development/tools/run-cpp.mjs foundations/sympl
 - W3C (2013), *SPARQL 1.1 Query Language*.
 - W3C (2012), *OWL 2 Web Ontology Language Profiles*, §4.3.
 - W3C (2017), *Shapes Constraint Language (SHACL)*.
+- W3C (2020), *JSON-LD 1.1* and *JSON-LD 1.1 Processing Algorithms and API*.
+- Rundgren, A., Jordan, B. and Erdtman, S. (2020), *RFC 8785: JSON Canonicalization Scheme (JCS)*.
 - Berners-Lee, T., Fielding, R. and Masinter, L. (2005), *RFC 3986: Uniform Resource Identifier (URI): Generic Syntax*.

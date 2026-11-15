@@ -1,6 +1,6 @@
 # 0003. The First Modules
 
-- **Status:** Accepted, provisionally
+- **Status:** Accepted, provisionally; amended by [decision 0004](0004-json-ld.md), which writes JSON-LD
 - **Date:** 2026-11-15
 - **Decided by:** Claude, within decision 0002
 

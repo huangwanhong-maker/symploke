@@ -4,4 +4,4 @@ What is new in symploke, one file per day of commits, newest first. Each commit 
 
 | Day | Sections |
 |---|---|
-| [2026-11-15](2026-11-15.md) | Founded: RDF's terms and documents, a store with undo, SPARQL's core, entailment with derivations, SHACL, isomorphism |
+| [2026-11-15](2026-11-15.md) | JSON-LD read and written, held to pyld; founded: RDF's terms and documents, a store with undo, SPARQL's core, entailment with derivations, SHACL, isomorphism |

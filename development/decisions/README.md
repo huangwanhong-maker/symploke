@@ -9,6 +9,7 @@ Each record captures one decision that shapes the structure, interfaces or tooli
 | [0001](0001-record-architecture-decisions.md) | Record architecture decisions | Accepted |
 | [0002](0002-scope-boundaries-and-dependencies.md) | Scope, boundaries and dependencies: linked data, on morphe, apodeixis and calx | Accepted |
 | [0003](0003-the-first-modules.md) | The first modules: terms, syntax, store, query, entailment, shapes, canonical | Accepted, provisionally |
+| [0004](0004-json-ld.md) | JSON-LD: an eighth module, expansion and conversion to RDF by the W3C's API, remote contexts given and never fetched, writing compacted against prefixes, held to pyld | Accepted, provisionally |
 
 ## 2. Template
 

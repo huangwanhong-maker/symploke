@@ -44,6 +44,18 @@ The checks hold the subclass closure to morphe's reachability. Each derived trip
 
 A SHACL shape is satisfied by a focus node when each of its constraint components is (SHACL §4). A property shape's value nodes are the nodes reached by its path. Comparisons by sh:minInclusive and its kin use SPARQL's ordering, and a value that cannot be compared with the bound violates it (§4.4.1). Recursive shapes are refused, since SHACL leaves their semantics undefined (§3.4.4).
 
-## 5. References
+## 5. JSON-LD
+
+A JSON-LD document denotes the dataset its expanded form denotes (JSON-LD 1.1 API, §5.1 and §8.1). Expansion is a function of the document, its base and the contexts it cites. When the contexts are given rather than fetched, the statements a document denotes depend on nothing else, which is what the invariant "pure" asks.
+
+Expansion and compaction are not inverse functions on documents: many documents compact one dataset. What holds, and is checked, is weaker. Writing a dataset and reading the document back gives the same dataset up to the names of its blank nodes, since compaction against a context of prefixes only abbreviates IRIs and lifts single values out of arrays.
+
+Two literals cannot be carried into RDF:
+- one whose language tag is not well formed (RDF 1.1 Concepts, §3.3);
+- one in a direction other than none, under the API's default.
+
+The first yields no statement. The second keeps its language and loses its direction. Both are stated in the module's README.
+
+## 6. References
 
 See the README.
